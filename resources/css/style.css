@@ -7,7 +7,7 @@ body {
   width: 100%;
   font-family: "Roboto", "Arial", sans-serif;
 }
-.fullWrap {
+.fullWrap, .centerWrap {
   max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
@@ -207,6 +207,7 @@ header nav a:hover {
   height: auto;
   background: #fff;
   vertical-align: top;
+  border: 1px solid #555555;
 }
 .section-chip:nth-child(3n + 2) {
   margin-left: 0;
@@ -236,4 +237,24 @@ header nav a:hover {
   font-size: 16px;
   text-transform: uppercase;
   color: #555555;
+}
+footer {
+  padding: 16px 0;
+  background: #dadada;
+  border-top: 1px solid #555555;
+}
+footer .centerWrap {
+  padding: 0 24px;
+}
+footer p, footer nav {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+footer nav {
+  float: right;
+}
+footer nav a {
+  color: #8181818;
+  padding-left: 24px;
 }
