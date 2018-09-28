@@ -18,6 +18,7 @@ header {
   width: 100%;
   height: 64px;
   padding: 0 24px;
+  font-size: 0;
 }
 h2 {
   font-family: "Roboto", "Arial", serif;
@@ -61,34 +62,48 @@ p {
   color: #ffffff;
   text-decoration: none;
   background: #000000;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+.button:hover {
+  background: #ffffff;
+  color: #000000;
+  transition: all .2s ease-in;
 }
 
+/* HEADER AREA */
 .logo {
   position: relative;
   display: inline-block;
   padding: 15px 0;
   vertical-align: middle;
+  text-decoration: none;
 
 }
 .logo img {
   position: relative;
   display: inline-block;
+  top: 2px;
   vertical-align: middle;
 }
-.logo p{
+.logo span{
   display: inline-block;
-  font-size: 20px;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 1.2;
   font-weight: 900;
   color: #c7b86e;
   vertical-align: middle;
   text-transform: uppercase;
 
 }
-.logo p span {
+.logo span.accent {
   font-family: "Playfair Display", serif;
   font-style: italic;
+  line-height: 1.3;
   color: #000000;
   text-transform: none;
+  vertical-align: baseline;
 }
 header nav {
   position: relative;
@@ -98,6 +113,7 @@ header nav {
 }
 header nav a {
   color: #818181;
+  font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
@@ -135,8 +151,9 @@ header nav a:hover {
 }
 
 .section-left, .main-banner img {
-  width: 60%;
-  padding-right: 24px;
+  width: 58%;
+  margin-right: 2%;
+
 }
 
 .section-left img, .section-left video {
@@ -144,6 +161,9 @@ header nav a:hover {
   display: block;
   width: 100%;
   height: auto;
+}
+.section-left img, .main-banner img {
+  border-radius: 5px;
 }
 .section-left h2 {
   padding: 32px 0;
@@ -177,6 +197,12 @@ header nav a:hover {
   height: auto;
   vertical-align: middle;
 }
+.mini img {
+  border-radius: 50%;
+}
+.mini img.mobileImage {
+  display: none;
+}
 .mini-content {
   width: 65%;
   padding-left: 16px;
@@ -191,6 +217,7 @@ header nav a:hover {
   color: #c7b86e;
   padding: 2px 4px;
   text-decoration: none;
+  border-radius: 3px;
 }
 .mini-content a:hover {
   color: #fff;
@@ -208,6 +235,7 @@ header nav a:hover {
   background: #fff;
   vertical-align: top;
   border: 1px solid #555555;
+  border-radius: 5px;
 }
 .section-chip:nth-child(3n + 2) {
   margin-left: 0;
@@ -238,8 +266,10 @@ header nav a:hover {
   text-transform: uppercase;
   color: #555555;
 }
+
+/* FOOTER */
 footer {
-  padding: 16px 0;
+  padding: 16px 0 32px 0;
   background: #dadada;
   border-top: 1px solid #555555;
 }
@@ -255,6 +285,56 @@ footer nav {
   float: right;
 }
 footer nav a {
-  color: #8181818;
+  color: #818181;
   padding-left: 24px;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 700;
+}
+footer nav a:hover {
+  color: #000000;
+  transition: color .2s ease;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 900px) {
+  .mobNoDisplay {
+    display: none;
+  }
+  /* header nav {
+    float: none;
+    display: inline-block;
+  }
+  .logo span {
+    display: none;
+  }
+  .logo, header nav a {
+    min-width: 50px;
+    width: 25%;
+    height: 100%;
+    padding: 0 5px;
+  }
+  header nav a.iconCampus {
+    background: url(../images/ic-on-campus.svg) no-repeat center;
+    background-size: 27px auto;
+  } */
+ .main-banner {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .main-banner {
+    padding-top: 0;
+  }
+  .banner-content {
+    padding: 32px 16px 0 16px;
+    width: 100%;
+  }
+  .section-left, .main-banner img, .section-right {
+    display: block;
+    width: 100%;
+  }
+  .section-left img, .main-banner img {
+    border-radius: 0;
+  }
+
 }
