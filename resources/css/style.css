@@ -111,6 +111,9 @@ header nav {
   float: right;
   padding: 22px 0;
 }
+header .mobileNav {
+  display: none;
+}
 header nav a {
   color: #818181;
   font-size: 16px;
@@ -299,25 +302,42 @@ footer nav a:hover {
 /* RESPONSIVE */
 @media screen and (max-width: 900px) {
   .mobNoDisplay {
+    display: none !important;
+  }
+  header {
+    padding: 0;
+  }
+  header .desktopNav {
     display: none;
   }
-  /* header nav {
-    float: none;
+  header .mobileNav {
+    display: block;
+  }
+  header .mobileNav a {
     display: inline-block;
-  }
-  .logo span {
-    display: none;
-  }
-  .logo, header nav a {
-    min-width: 50px;
     width: 25%;
-    height: 100%;
-    padding: 0 5px;
+    height: 64px;
+    vertical-align: top;
   }
-  header nav a.iconCampus {
-    background: url(../images/ic-on-campus.svg) no-repeat center;
-    background-size: 27px auto;
-  } */
+  header .mobileNav a.logo {
+    background: url(../images/ic-logo.svg) no-repeat center center;
+    background-size: 30px auto;
+  }
+  header .mobileNav a.campus {
+    background: url(../images/ic-on-campus.svg) no-repeat center center;
+    background-size: 30px auto;
+  }
+  header .mobileNav a.online {
+    background: url(../images/ic-online.svg) no-repeat center center;
+    background-size: 30px auto;
+  }
+  header .mobileNav a.login {
+    background: url(../images/ic-login.svg) no-repeat center center;
+    background-size: 30px auto;
+  }
+  header .mobileNav a span{
+    font-size: 0;
+  }
  .main-banner {
     padding-left: 0;
     padding-right: 0;
@@ -336,5 +356,28 @@ footer nav a:hover {
   .section-left img, .main-banner img {
     border-radius: 0;
   }
+  .section-right {
+    border: none;
+  }
+  #campus .section-left {
+    display: none;
+  }
+  #campus.sectionWrap {
+    padding: 16px 16px 32px 16px;
+  }
+  .section-right .mini {
+    padding: 0;
+  }
+  .mini img.mobileImage {
+    display: block;
+    width: 100%;
+    border-radius: 0;
 
+
+  }
+  .mini .mini-content {
+    display: block;
+    width: 100%;
+    padding: 16px 16px 64px 16px;
+  }
 }
