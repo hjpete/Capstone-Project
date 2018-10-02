@@ -8,9 +8,12 @@ body {
   font-family: "Roboto", "Arial", sans-serif;
 }
 .fullWrap, .centerWrap {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   overflow: hidden;
+}
+.centerWrap {
+  max-width: 1200px;
 }
 header {
   position: relative;
@@ -171,8 +174,11 @@ header nav a:hover {
 .section-left h2 {
   padding: 32px 0;
 }
-#online h2 {
+#online h2, #thesis h2 {
   text-align: center;
+}
+#thesis h2 {
+  margin-bottom: 32px;
 }
 .section-left .quote-attr {
   font-size: 10px;
@@ -368,16 +374,56 @@ footer nav a:hover {
   .section-right .mini {
     padding: 0;
   }
+  .section-right .mini:nth-child(odd) {background: none;}
   .mini img.mobileImage {
     display: block;
     width: 100%;
     border-radius: 0;
-
-
   }
   .mini .mini-content {
     display: block;
     width: 100%;
     padding: 16px 16px 64px 16px;
+  }
+  .sectionWrap#online {
+    border-top: 1px solid #dadada;
+    padding: 32px 16px;
+    background: none;
+  }
+  #online h2, #thesis h2 {
+    margin-bottom: 16px;
+  }
+  .section-chip {
+    display: block;
+    width: 100%;
+    min-height: 0;
+    height: auto;
+    margin: 0 auto 8px auto;
+    padding: 16px 16px 24px 16px;
+
+    background: rgba(199, 184, 110, .6);
+  }
+  .section-chip img{
+    display: none;
+  }
+  .section-chip h4 {
+    padding-top: 8px;
+    font-size: 24px;
+  }
+  .section-chip p {
+    display: none;
+  }
+  .sectionWrap#thesis {
+    padding: 32px 0 24px 0;
+    border-top: 1px solid #dadada;
+  }
+  #thesis .section-left h2, #thesis .section-left p, #thesis .section-right {
+    display: none;
+  }
+  footer {
+    padding: 16px;
+  }
+  footer a {
+    display: none;
   }
 }
